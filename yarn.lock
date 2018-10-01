@@ -1705,6 +1705,10 @@ code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
 
+codemirror@5.40.2:
+  version "5.40.2"
+  resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.40.2.tgz#f4a41fee2d84e679543591b3680af259d903330b"
+
 collection-visit@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/collection-visit/-/collection-visit-1.0.0.tgz#4bc0373c164bc3291b4d368c829cf1a80a59dca0"
@@ -5517,6 +5521,10 @@ raw-body@2.3.2:
     iconv-lite "0.4.19"
     unpipe "1.0.0"
 
+raw-loader@0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/raw-loader/-/raw-loader-0.5.1.tgz#0c3d0beaed8a01c966d9787bf778281252a979aa"
+
 rc@^1.2.7:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/rc/-/rc-1.2.8.tgz#cd924bf5200a075b83c188cd6b9e211b7fc0d3ed"
@@ -5986,6 +5994,10 @@ shell-quote@^1.6.1:
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
+
+simple-assign@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/simple-assign/-/simple-assign-0.1.0.tgz#17fd3066a5f3d7738f50321bb0f14ca281cc4baa"
 
 simple-swizzle@^0.2.2:
   version "0.2.2"
@@ -6753,6 +6765,12 @@ vue-template-es2015-compiler@^1.6.0:
 vue@^2.5.17:
   version "2.5.17"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.17.tgz#0f8789ad718be68ca1872629832ed533589c6ada"
+
+vuep@0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/vuep/-/vuep-0.8.1.tgz#949b455f375788fbd7d1c35ca495a0faa5d5502f"
+  dependencies:
+    simple-assign "^0.1.0"
 
 watchpack@^1.5.0:
   version "1.6.0"
