@@ -18,6 +18,10 @@ import LoopConditionals from '!raw-loader!./components/LoopConditionals.vue';
 import UserInput from '!raw-loader!./components/UserInput.vue';
 import ComponentProps from '!raw-loader!./components/ComponentProps.vue';
 import InstanceLifecycle from '!raw-loader!./components/InstanceLifecycle.vue';
+import Interpolation from '!raw-loader!./components/Interpolation.vue';
+import Directives from '!raw-loader!./components/Directives.vue';
+import ComputedProperties from '!raw-loader!./components/ComputedProperties.vue';
+import Watcher from '!raw-loader!./components/Watcher.vue';
 
 const components = [
   { name: 'Hello World', code: HelloWorld },
@@ -26,6 +30,10 @@ const components = [
   { name: 'User input and reactive binding', code: UserInput },
   { name: 'Component Props', code: ComponentProps },
   { name: 'Instance Lifecycle', code: InstanceLifecycle },
+  { name: 'Interpolation', code: Interpolation },
+  { name: 'Directives', code: Directives },
+  { name: 'Computed Properties', code: ComputedProperties },
+  { name: 'Watcher', code: Watcher },
 ];
 
 export default {

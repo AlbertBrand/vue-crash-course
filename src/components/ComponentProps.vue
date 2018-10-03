@@ -1,9 +1,6 @@
 <template>
   <ol>
-    <todo-item
-      v-for="item in groceryList"
-      :todo="item"
-      :key="item.id">
+    <todo-item v-for="item in groceryList" :todo="item" :key="item.id">
     </todo-item>
   </ol>
 </template>
