@@ -1,8 +1,6 @@
 <template>
   <ol>
-    <li v-for="(todo, idx) in todos" 
-        v-if="idx > 0" 
-        :key="todo.text">
+    <li v-for="todo in todos" :key="todo.text">
       {{ todo.text }}
     </li>
   </ol>

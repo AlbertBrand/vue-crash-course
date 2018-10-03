@@ -14,7 +14,7 @@ import ConsoleLogger from './ConsoleLogger.vue';
 
 import HelloWorld from '!raw-loader!./components/HelloWorld.vue';
 import AttributeBinding from '!raw-loader!./components/AttributeBinding.vue';
-import LoopConditionals from '!raw-loader!./components/LoopConditionals.vue';
+import SimpleList from '!raw-loader!./components/SimpleList.vue';
 import UserInput from '!raw-loader!./components/UserInput.vue';
 import ComponentProps from '!raw-loader!./components/ComponentProps.vue';
 import InstanceLifecycle from '!raw-loader!./components/InstanceLifecycle.vue';
@@ -22,11 +22,15 @@ import Interpolation from '!raw-loader!./components/Interpolation.vue';
 import Directives from '!raw-loader!./components/Directives.vue';
 import ComputedProperties from '!raw-loader!./components/ComputedProperties.vue';
 import Watcher from '!raw-loader!./components/Watcher.vue';
+import ClassBindings from '!raw-loader!./components/ClassBindings.vue';
+import StyleBindings from '!raw-loader!./components/StyleBindings.vue';
+import Conditionals from '!raw-loader!./components/Conditionals.vue';
+import ExtendedList from '!raw-loader!./components/ExtendedList.vue';
 
 const components = [
   { name: 'Hello World', code: HelloWorld },
   { name: 'Attribute Binding', code: AttributeBinding },
-  { name: 'Loop and Conditionals', code: LoopConditionals },
+  { name: 'Simple List', code: SimpleList },
   { name: 'User input and reactive binding', code: UserInput },
   { name: 'Component Props', code: ComponentProps },
   { name: 'Instance Lifecycle', code: InstanceLifecycle },
@@ -34,6 +38,10 @@ const components = [
   { name: 'Directives', code: Directives },
   { name: 'Computed Properties', code: ComputedProperties },
   { name: 'Watcher', code: Watcher },
+  { name: 'Class Bindings', code: ClassBindings },
+  { name: 'Style Bindings', code: StyleBindings },
+  { name: 'Conditionals', code: Conditionals },
+  { name: 'Extended List', code: ExtendedList },
 ];
 
 export default {
