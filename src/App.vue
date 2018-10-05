@@ -19,7 +19,7 @@ import UserInput from '!raw-loader!./components/UserInput.vue';
 import ComponentProps from '!raw-loader!./components/ComponentProps.vue';
 import InstanceLifecycle from '!raw-loader!./components/InstanceLifecycle.vue';
 import Interpolation from '!raw-loader!./components/Interpolation.vue';
-import Directives from '!raw-loader!./components/Directives.vue';
+import BuiltInDirectives from '!raw-loader!./components/BuiltInDirectives.vue';
 import ComputedProperties from '!raw-loader!./components/ComputedProperties.vue';
 import Watcher from '!raw-loader!./components/Watcher.vue';
 import ClassBindings from '!raw-loader!./components/ClassBindings.vue';
@@ -34,6 +34,9 @@ import ComponentMessaging from '!raw-loader!./components/ComponentMessaging.vue'
 import PropsPassing from '!raw-loader!./components/PropsPassing.vue';
 import PropsValidation from '!raw-loader!./components/PropsValidation.vue';
 import Slots from '!raw-loader!./components/Slots.vue';
+import AsyncComponent from '!raw-loader!./components/AsyncComponent.vue';
+import Mixins from '!raw-loader!./components/Mixins.vue';
+import CustomDirectives from '!raw-loader!./components/CustomDirectives.vue';
 
 const components = [
   { name: 'Hello World', code: HelloWorld },
@@ -44,7 +47,7 @@ const components = [
 
   { name: 'Instance Lifecycle', code: InstanceLifecycle },
   { name: 'Interpolation', code: Interpolation },
-  { name: 'Directives', code: Directives },
+  { name: 'Built-in Directives', code: BuiltInDirectives },
   { name: 'Computed Properties', code: ComputedProperties },
   { name: 'Watcher', code: Watcher },
   { name: 'Class Bindings', code: ClassBindings },
@@ -59,6 +62,9 @@ const components = [
   { name: 'Props Passing', code: PropsPassing },
   { name: 'Props Validation', code: PropsValidation },
   { name: 'Slots', code: Slots },
+  { name: 'Asynchronous Component', code: AsyncComponent },
+  { name: 'Mixins', code: Mixins },
+  { name: 'Custom Directives', code: CustomDirectives },
 ];
 
 export default {

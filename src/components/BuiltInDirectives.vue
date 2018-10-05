@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Directives</h2>
+    <h2>Built-in Directives</h2>
     <p v-if="shown">Now you see me</p>
     <p v-show="shown">Still seeing me</p>
 
