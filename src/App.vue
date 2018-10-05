@@ -30,6 +30,10 @@ import FilteredList from '!raw-loader!./components/FilteredList.vue';
 import ComponentList from '!raw-loader!./components/ComponentList.vue';
 import EventHandling from '!raw-loader!./components/EventHandling.vue';
 import VModelBinding from '!raw-loader!./components/VModelBinding.vue';
+import ComponentMessaging from '!raw-loader!./components/ComponentMessaging.vue';
+import PropsPassing from '!raw-loader!./components/PropsPassing.vue';
+import PropsValidation from '!raw-loader!./components/PropsValidation.vue';
+import Slots from '!raw-loader!./components/Slots.vue';
 
 const components = [
   { name: 'Hello World', code: HelloWorld },
@@ -37,6 +41,7 @@ const components = [
   { name: 'Simple List', code: SimpleList },
   { name: 'User input and reactive binding', code: UserInput },
   { name: 'Component Props', code: ComponentProps },
+
   { name: 'Instance Lifecycle', code: InstanceLifecycle },
   { name: 'Interpolation', code: Interpolation },
   { name: 'Directives', code: Directives },
@@ -50,6 +55,10 @@ const components = [
   { name: 'Component List', code: ComponentList },
   { name: 'Event Handling', code: EventHandling },
   { name: 'v-model Binding', code: VModelBinding },
+  { name: 'Component Messaging', code: ComponentMessaging },
+  { name: 'Props Passing', code: PropsPassing },
+  { name: 'Props Validation', code: PropsValidation },
+  { name: 'Slots', code: Slots },
 ];
 
 export default {

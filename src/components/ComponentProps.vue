@@ -1,19 +1,20 @@
 <template>
   <ol>
-    <todo-item v-for="item in groceryList" :todo="item" :key="item.id">
-    </todo-item>
+    <todo-item v-for="item in groceryList" :todo="item" :key="item.id"></todo-item>
   </ol>
 </template>
 
 <script>
 const TodoItem = {
-  props: ['todo'],
+  props: {
+    todo: { type: Object },
+  },
   template: '<li>{{ todo.text }}</li>',
 };
 
 const TodoList = {
   components: {
-    'todo-item': TodoItem,
+    TodoItem,
   },
   data: () => ({
     groceryList: [

@@ -21,12 +21,8 @@ const TodoItem = {
     </li>
   `,
   props: {
-    todo: {
-      type: Object,
-    },
-    onRemove: {
-      type: Function,
-    },
+    todo: { type: Object },
+    onRemove: { type: Function },
   },
 };
 
@@ -37,18 +33,9 @@ const TodoList = {
   data: {
     newTodoText: '',
     todos: [
-      {
-        id: 1,
-        title: 'Do the dishes',
-      },
-      {
-        id: 2,
-        title: 'Take out the trash',
-      },
-      {
-        id: 3,
-        title: 'Mow the lawn',
-      },
+      { id: 1, title: 'Do the dishes' },
+      { id: 2, title: 'Take out the trash' },
+      { id: 3, title: 'Mow the lawn' },
     ],
     newTodoId: 4,
   },

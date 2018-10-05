@@ -9,14 +9,14 @@
     <pre>{{ message2 }}</pre>
 
     <h2>Checkboxes</h2>
-    <p v-for="option in options" :key="option.value">
+    <p v-for="option in options" :key="'c' + option.value">
       <input type="checkbox" :id="'c' + option.value" :value="option.value" v-model="checked"/>
       <label :for="'c' + option.value">{{ option.text }}</label>
     </p>
     <p>Checked: {{ checked }}</p>
 
     <h2>Radio choice</h2>
-    <p v-for="option in options" :key="option.value">
+    <p v-for="option in options" :key="'r' + option.value">
       <input type="radio" :id="'r' + option.value" :value="option.value" v-model="picked"/>
       <label :for="'r' + option.value">{{ option.text }}</label>
     </p>
@@ -24,14 +24,14 @@
 
     <h2>Select option</h2>
     <select v-model="selected">
-      <option v-for="option in options" :key="option.value" :value="option.value">
+      <option v-for="option in options" :key="'s' + option.value" :value="option.value">
         {{ option.text }}
       </option>
     </select>
     <p>Selected: {{ selected }}</p>
 
     <select v-model="multiSelected" multiple>
-      <option v-for="option in options" :key="option.value" :value="option.value">
+      <option v-for="option in options" :key="'m' + option.value" :value="option.value">
         {{ option.text }}
       </option>
     </select>

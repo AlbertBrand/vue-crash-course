@@ -1,0 +1,47 @@
+<template>
+  <div>
+    <child-emit name="A" @parent="parentMethod($event)"></child-emit>
+    <child-callback name="B" :on-click="parentMethod"></child-callback>
+  </div>
+</template>
+
+<script>
+const ChildEmit = {
+  props: {
+    name: { type: String },
+  },
+  template: `
+    <div>
+      <h3>Child {{ name }}</h3>
+      <button @click="$emit('parent', name)">Emit</button>
+    </div>
+  `,
+};
+
+const ChildCallback = {
+  props: {
+    name: { type: String },
+    onClick: { type: Function },
+  },
+  template: `
+    <div>
+      <h3>Child {{ name }}</h3>
+      <button @click="onClick(name)">Callback</button>
+    </div>
+  `,
+};
+
+const Parent = {
+  components: {
+    ChildEmit,
+    ChildCallback,
+  },
+  methods: {
+    parentMethod: function(childName) {
+      console.log('parent called by', childName);
+    },
+  },
+};
+
+export default Parent;
+</script>

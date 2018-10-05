@@ -2,7 +2,7 @@
   <div>
     <button @click="updateTime">Update props</button>
     <button @click="toggle">Toggle component</button>
-    <lifecycle v-if="shown" :time="time" />
+    <lifecycle v-if="shown" :time="time"></lifecycle>
   </div>
 </template>
 

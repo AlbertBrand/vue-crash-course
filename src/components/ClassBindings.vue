@@ -21,7 +21,7 @@
     </div>
 
     <h2>Component classes</h2>
-    <my-component class="centered" />
+    <my-component class="centered"></my-component>
 
   </div>
 </template>

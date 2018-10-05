@@ -8,21 +8,23 @@ export default {
     message: '',
   }),
   beforeCreate: function() {
-    const log = console.log;
-    const self = this;
-    console.log = function() {
-      const args = [];
-      for (let i = 0; i < arguments.length; i++) {
-        const arg = arguments[i];
-        if (arg === Object(arg)) {
-          args.push(JSON.stringify(arg, null, 2));
-        } else {
-          args.push(arg);
+    function wrap(vm, original) {
+      return function() {
+        const args = [];
+        for (let i = 0; i < arguments.length; i++) {
+          const arg = arguments[i];
+          if (arg === Object(arg)) {
+            args.push(JSON.stringify(arg, null, 2));
+          } else {
+            args.push(arg);
+          }
         }
-      }
-      self.message += args.join(' ') + '\n';
-      log(...arguments);
-    };
+        vm.message += args.join(' ') + '\n';
+        original(...arguments);
+      };
+    }
+    console.log = wrap(this, console.log);
+    console.error = wrap(this, console.error);
   },
 };
 </script>
