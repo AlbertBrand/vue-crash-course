@@ -26,6 +26,10 @@ import ClassBindings from '!raw-loader!./components/ClassBindings.vue';
 import StyleBindings from '!raw-loader!./components/StyleBindings.vue';
 import Conditionals from '!raw-loader!./components/Conditionals.vue';
 import ExtendedList from '!raw-loader!./components/ExtendedList.vue';
+import FilteredList from '!raw-loader!./components/FilteredList.vue';
+import ComponentList from '!raw-loader!./components/ComponentList.vue';
+import EventHandling from '!raw-loader!./components/EventHandling.vue';
+import VModelBinding from '!raw-loader!./components/VModelBinding.vue';
 
 const components = [
   { name: 'Hello World', code: HelloWorld },
@@ -42,6 +46,10 @@ const components = [
   { name: 'Style Bindings', code: StyleBindings },
   { name: 'Conditionals', code: Conditionals },
   { name: 'Extended List', code: ExtendedList },
+  { name: 'Filtered List', code: FilteredList },
+  { name: 'Component List', code: ComponentList },
+  { name: 'Event Handling', code: EventHandling },
+  { name: 'v-model Binding', code: VModelBinding },
 ];
 
 export default {
