@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <component-menu :components="components" :onClick="setComponent" class="menu" />
+    <component-menu :groups="groups" :onClick="setComponent" class="menu" />
     <div class="content">
       <vuep :template="component.code" :key="'preview:' + component.name" class="preview" />
       <console-logger :key="'log:' + component.name" class="logger" />
@@ -39,34 +39,53 @@ import Mixins from '!raw-loader!./components/Mixins.vue';
 import CustomDirectives from '!raw-loader!./components/CustomDirectives.vue';
 import Filters from '!raw-loader!./components/Filters.vue';
 
-const components = [
-  { name: 'Hello World', code: HelloWorld },
-  { name: 'Attribute Binding', code: AttributeBinding },
-  { name: 'Simple List', code: SimpleList },
-  { name: 'User input and reactive binding', code: UserInput },
-  { name: 'Component Props', code: ComponentProps },
-
-  { name: 'Instance Lifecycle', code: InstanceLifecycle },
-  { name: 'Interpolation', code: Interpolation },
-  { name: 'Built-in Directives', code: BuiltInDirectives },
-  { name: 'Computed Properties', code: ComputedProperties },
-  { name: 'Watcher', code: Watcher },
-  { name: 'Class Bindings', code: ClassBindings },
-  { name: 'Style Bindings', code: StyleBindings },
-  { name: 'Conditionals', code: Conditionals },
-  { name: 'Extended List', code: ExtendedList },
-  { name: 'Filtered List', code: FilteredList },
-  { name: 'Component List', code: ComponentList },
-  { name: 'Event Handling', code: EventHandling },
-  { name: 'v-model Binding', code: VModelBinding },
-  { name: 'Component Messaging', code: ComponentMessaging },
-  { name: 'Props Passing', code: PropsPassing },
-  { name: 'Props Validation', code: PropsValidation },
-  { name: 'Slots', code: Slots },
-  { name: 'Asynchronous Component', code: AsyncComponent },
-  { name: 'Mixins', code: Mixins },
-  { name: 'Custom Directives', code: CustomDirectives },
-  { name: 'Filters', code: Filters },
+const groups = [
+  {
+    name: 'Start',
+    components: [
+      { name: 'Hello World', code: HelloWorld },
+      { name: 'Attribute Binding', code: AttributeBinding },
+      { name: 'Simple List', code: SimpleList },
+      { name: 'User input and reactive binding', code: UserInput },
+      { name: 'Component Props', code: ComponentProps },
+    ],
+  },
+  {
+    name: 'Essentials',
+    components: [
+      { name: 'Instance Lifecycle', code: InstanceLifecycle },
+      { name: 'Interpolation', code: Interpolation },
+      { name: 'Built-in Directives', code: BuiltInDirectives },
+      { name: 'Computed Properties', code: ComputedProperties },
+      { name: 'Watcher', code: Watcher },
+      { name: 'Class Bindings', code: ClassBindings },
+      { name: 'Style Bindings', code: StyleBindings },
+      { name: 'Conditionals', code: Conditionals },
+      { name: 'Extended List', code: ExtendedList },
+      { name: 'Filtered List', code: FilteredList },
+      { name: 'Component List', code: ComponentList },
+      { name: 'Event Handling', code: EventHandling },
+      { name: 'v-model Binding', code: VModelBinding },
+    ],
+  },
+  {
+    name: 'Components',
+    components: [
+      { name: 'Component Messaging', code: ComponentMessaging },
+      { name: 'Props Passing', code: PropsPassing },
+      { name: 'Props Validation', code: PropsValidation },
+      { name: 'Slots', code: Slots },
+      { name: 'Asynchronous Component', code: AsyncComponent },
+    ],
+  },
+  {
+    name: 'Reusability',
+    components: [
+      { name: 'Mixins', code: Mixins },
+      { name: 'Custom Directives', code: CustomDirectives },
+      { name: 'Filters', code: Filters },
+    ],
+  },
 ];
 
 export default {
@@ -75,8 +94,8 @@ export default {
     ConsoleLogger,
   },
   data: () => ({
-    component: components[0],
-    components,
+    component: groups[0].components[0],
+    groups,
   }),
   methods: {
     setComponent(cmp) {
