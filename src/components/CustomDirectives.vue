@@ -5,6 +5,10 @@
 
     <h3>Arguments</h3>
     <div v-demo:foo.a.b="message"></div>
+
+    <h3>Shorthand</h3>
+    <div v-background-color="'#00ff00'">Green</div>
+
   </div>
 </template>
 
@@ -28,6 +32,10 @@ const Demo = {
   },
 };
 
+const BackgroundColor = function(el, binding) {
+  el.style.backgroundColor = binding.value;
+};
+
 export default {
   data: () => ({
     message: 'hello',
@@ -35,6 +43,7 @@ export default {
   directives: {
     Focus,
     Demo,
+    BackgroundColor,
   },
 };
 </script>

@@ -37,6 +37,7 @@ import Slots from '!raw-loader!./components/Slots.vue';
 import AsyncComponent from '!raw-loader!./components/AsyncComponent.vue';
 import Mixins from '!raw-loader!./components/Mixins.vue';
 import CustomDirectives from '!raw-loader!./components/CustomDirectives.vue';
+import Filters from '!raw-loader!./components/Filters.vue';
 
 const components = [
   { name: 'Hello World', code: HelloWorld },
@@ -65,6 +66,7 @@ const components = [
   { name: 'Asynchronous Component', code: AsyncComponent },
   { name: 'Mixins', code: Mixins },
   { name: 'Custom Directives', code: CustomDirectives },
+  { name: 'Filters', code: Filters },
 ];
 
 export default {
