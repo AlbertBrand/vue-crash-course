@@ -2,13 +2,14 @@
   <div class="app">
     <component-menu :groups="groups" :onClick="setComponent" class="menu" />
     <div class="content">
-      <vuep :template="component.code" :key="'preview:' + component.name" class="preview" />
+      <vuep :template="component.code" :key="'preview:' + component.name" :scope="scope" class="preview" />
       <console-logger :key="'log:' + component.name" class="logger" />
     </div>
   </div>
 </template>
 
 <script>
+import Vue from 'vue';
 import ComponentMenu from './ComponentMenu.vue';
 import ConsoleLogger from './ConsoleLogger.vue';
 
@@ -30,6 +31,8 @@ import FilteredList from '!raw-loader!./components/FilteredList.vue';
 import ComponentList from '!raw-loader!./components/ComponentList.vue';
 import EventHandling from '!raw-loader!./components/EventHandling.vue';
 import VModelBinding from '!raw-loader!./components/VModelBinding.vue';
+import Transition from '!raw-loader!./components/Transition.vue';
+import TransitionGroup from '!raw-loader!./components/TransitionGroup.vue';
 import ComponentMessaging from '!raw-loader!./components/ComponentMessaging.vue';
 import PropsPassing from '!raw-loader!./components/PropsPassing.vue';
 import PropsValidation from '!raw-loader!./components/PropsValidation.vue';
@@ -40,6 +43,9 @@ import CustomDirectives from '!raw-loader!./components/CustomDirectives.vue';
 import Filters from '!raw-loader!./components/Filters.vue';
 import ErrorCapturing from '!raw-loader!./components/ErrorCapturing.vue';
 import RenderFunction from '!raw-loader!./components/RenderFunction.vue';
+import ProvideInject from '!raw-loader!./components/ProvideInject.vue';
+import InstanceEvents from '!raw-loader!./components/InstanceEvents.vue';
+import NextTick from '!raw-loader!./components/NextTick.vue';
 
 const groups = [
   {
@@ -71,6 +77,13 @@ const groups = [
     ],
   },
   {
+    name: 'Animation',
+    components: [
+      { name: 'Transition', code: Transition },
+      { name: 'Transition Group', code: TransitionGroup },
+    ],
+  },
+  {
     name: 'Components',
     components: [
       { name: 'Component Messaging', code: ComponentMessaging },
@@ -93,11 +106,15 @@ const groups = [
     components: [
       { name: 'Error Capturing', code: ErrorCapturing },
       { name: 'Render Function', code: RenderFunction },
+      { name: 'Provide and Inject', code: ProvideInject },
+      { name: 'Instance Events', code: InstanceEvents },
+      { name: 'Next Tick', code: NextTick },
     ],
   },
 ];
 
 export default {
+  name: 'app',
   components: {
     ComponentMenu,
     ConsoleLogger,
@@ -105,6 +122,9 @@ export default {
   data: () => ({
     component: groups[0].components[0],
     groups,
+    scope: {
+      Vue,
+    },
   }),
   methods: {
     setComponent(cmp) {
@@ -126,6 +146,7 @@ body {
 }
 .menu {
   width: 200px;
+  min-width: 200px;
   overflow: scroll;
 }
 .content {
