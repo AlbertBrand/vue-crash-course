@@ -38,6 +38,8 @@ import AsyncComponent from '!raw-loader!./components/AsyncComponent.vue';
 import Mixins from '!raw-loader!./components/Mixins.vue';
 import CustomDirectives from '!raw-loader!./components/CustomDirectives.vue';
 import Filters from '!raw-loader!./components/Filters.vue';
+import ErrorCapturing from '!raw-loader!./components/ErrorCapturing.vue';
+import RenderFunction from '!raw-loader!./components/RenderFunction.vue';
 
 const groups = [
   {
@@ -86,6 +88,13 @@ const groups = [
       { name: 'Filters', code: Filters },
     ],
   },
+  {
+    name: 'Advanced',
+    components: [
+      { name: 'Error Capturing', code: ErrorCapturing },
+      { name: 'Render Function', code: RenderFunction },
+    ],
+  },
 ];
 
 export default {
@@ -117,6 +126,7 @@ body {
 }
 .menu {
   width: 200px;
+  overflow: scroll;
 }
 .content {
   flex: 1;

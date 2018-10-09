@@ -31,7 +31,6 @@ li {
 
 <script>
 export default {
-  name: 'app',
   props: {
     groups: {
       type: Array,
