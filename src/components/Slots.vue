@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h3>Default slot</h3>
+    <h2>Default slot</h2>
     <alert-box>
       Something bad happened.
       <reset-button></reset-button>
     </alert-box>
 
-    <h3>Named slots</h3>
+    <h2>Named slots</h2>
     <layout>
       <p>A paragraph for the main content.</p>
       <p>And another one.</p>

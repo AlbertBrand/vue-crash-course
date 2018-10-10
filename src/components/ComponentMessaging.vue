@@ -12,7 +12,7 @@ const ChildEmit = {
   },
   template: `
     <div>
-      <h3>Child {{ name }}</h3>
+      <h2>Child {{ name }}</h2>
       <button @click="$emit('parent', name)">Emit</button>
     </div>
   `,
@@ -25,7 +25,7 @@ const ChildCallback = {
   },
   template: `
     <div>
-      <h3>Child {{ name }}</h3>
+      <h2>Child {{ name }}</h2>
       <button @click="onClick(name)">Callback</button>
     </div>
   `,

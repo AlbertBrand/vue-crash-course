@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Type validation</h3>
+    <h2>Type validation</h2>
 
     <h4>Multiple types</h4>
     <block value="hello"></block>

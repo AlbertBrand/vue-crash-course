@@ -1,15 +1,15 @@
 <template>
   <div>
-    <h3>Casing</h3>
+    <h2>Casing</h2>
     <blog-post post-title="Title of post"></blog-post>
 
-    <h3>Pass different types</h3>
+    <h2>Pass different types</h2>
     <question :answer="42" :show-me="true" :list="[1, 2, 3]" :object="{ a: 'b' }"></question>
 
-    <h3>Pass object as properties</h3>
+    <h2>Pass object as properties</h2>
     <question v-bind="{ answer: 42, showMe: true, list: [1, 2, 3], object: { a: 'b' } }"></question>
 
-    <h3>Use props as initial value</h3>
+    <h2>Use props as initial value</h2>
     <counter :initial="3"></counter>
 
   </div>

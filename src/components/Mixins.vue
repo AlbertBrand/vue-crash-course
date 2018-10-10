@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Mixins</h3>
+    <h2>Mixins</h2>
     <mixed-component></mixed-component>
   </div>
 </template>

@@ -1,16 +1,16 @@
 <template>
   <div>
-    <h3>Custom filter</h3>
+    <h2>Custom filter</h2>
     {{ name | capitalize }}
 
-    <h3>Chaining</h3>
+    <h2>Chaining</h2>
     {{ name | capitalize | snake }}
 
-    <h3>Arguments</h3>
+    <h2>Arguments</h2>
     {{ name | snake('#') }}
 
-    <h3>Also in bindings</h3>
-    <input :value="name | capitalize"/>
+    <h2>Also in bindings</h2>
+    <input :value="name | capitalize" />
 
   </div>
 </template>

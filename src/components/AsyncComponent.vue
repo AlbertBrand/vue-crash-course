@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Asynchronous component loading</h3>
+    <h2>Asynchronous component loading</h2>
     <async-component></async-component>
   </div>
 </template>

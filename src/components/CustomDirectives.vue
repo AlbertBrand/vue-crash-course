@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h3>Custom directives</h3>
-    <input v-focus/>
+    <h2>Custom directives</h2>
+    <input v-focus />
 
-    <h3>Arguments</h3>
+    <h2>Arguments</h2>
     <div v-demo:foo.a.b="message"></div>
 
-    <h3>Shorthand</h3>
+    <h2>Shorthand</h2>
     <div v-background-color="'#00ff00'">Green</div>
 
   </div>

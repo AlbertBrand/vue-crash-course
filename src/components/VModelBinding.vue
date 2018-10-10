@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Text input</h2>
-    <input v-model="message" placeholder="edit me"/>
+    <input v-model="message" placeholder="edit me" />
     <p>Message is: {{ message }}</p>
 
     <h2>Multiline text</h2>
@@ -10,14 +10,14 @@
 
     <h2>Checkboxes</h2>
     <p v-for="option in options" :key="'c' + option.value">
-      <input type="checkbox" :id="'c' + option.value" :value="option.value" v-model="checked"/>
+      <input type="checkbox" :id="'c' + option.value" :value="option.value" v-model="checked" />
       <label :for="'c' + option.value">{{ option.text }}</label>
     </p>
     <p>Checked: {{ checked }}</p>
 
     <h2>Radio choice</h2>
     <p v-for="option in options" :key="'r' + option.value">
-      <input type="radio" :id="'r' + option.value" :value="option.value" v-model="picked"/>
+      <input type="radio" :id="'r' + option.value" :value="option.value" v-model="picked" />
       <label :for="'r' + option.value">{{ option.text }}</label>
     </p>
     <p>Picked: {{ picked }}</p>
@@ -39,12 +39,12 @@
 
     <h2>v-model Modifiers</h2>
 
-    <h3>.number</h3>
-    <input v-model.number="age" type="number"/>
+    <h2>.number</h2>
+    <input v-model.number="age" type="number" />
     <p>{{ age }} typeof {{ typeof age }}</p>
 
-    <h3>.trim</h3>
-    <input v-model.trim="trimmed"/>
+    <h2>.trim</h2>
+    <input v-model.trim="trimmed" />
     <p>"{{ trimmed }}"</p>
   </div>
 </template>

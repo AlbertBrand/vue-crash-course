@@ -10,16 +10,16 @@
 
     <div @click="say('outer')">Outside <span @click="say('inner')">inside</span></div>
 
-    <h3>.capture</h3>
+    <h2>.capture</h2>
     <div @click.capture="say('outer capture')">Outside <span @click="say('inner')">inside</span></div>
 
-    <h3>.self</h3>
+    <h2>.self</h2>
     <div @click.self="say('outer self')">Outside <span @click="say('inner')">inside</span></div>
 
-    <h3>.stop</h3>
+    <h2>.stop</h2>
     <div @click="say('outer')">Outside <span @click.stop="say('inner stop')">inside</span></div>
 
-    <h3>.once</h3>
+    <h2>.once</h2>
     <div @click.once="say('once')">Just once</div>
 
   </div>
