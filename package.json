@@ -11,6 +11,7 @@
     "codemirror": "5.40.2",
     "raw-loader": "0.5.1",
     "vue": "^2.5.17",
+    "vue-router": "3.0.1",
     "vuep": "0.8.1"
   },
   "devDependencies": {
