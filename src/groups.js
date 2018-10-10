@@ -31,6 +31,9 @@ import RenderFunction from '!raw-loader!./components/RenderFunction.vue';
 import ProvideInject from '!raw-loader!./components/ProvideInject.vue';
 import InstanceEvents from '!raw-loader!./components/InstanceEvents.vue';
 import NextTick from '!raw-loader!./components/NextTick.vue';
+import BasicHttp from '!raw-loader!./components/BasicHttp.vue';
+import Interceptor from '!raw-loader!./components/Interceptor.vue';
+import Resource from '!raw-loader!./components/Resource.vue';
 
 const groups = [
   {
@@ -94,6 +97,14 @@ const groups = [
       { name: 'Provide and Inject', code: ProvideInject },
       { name: 'Instance Events', code: InstanceEvents },
       { name: 'Next Tick', code: NextTick },
+    ],
+  },
+  {
+    name: 'Resource handling',
+    components: [
+      { name: 'Basic HTTP', code: BasicHttp },
+      { name: 'Interceptor', code: Interceptor },
+      { name: 'Resource', code: Resource },
     ],
   },
 ];
