@@ -5,37 +5,47 @@
 </template>
 
 <script>
+const consoleLog = console.log;
+const consoleError = console.error;
+
 export default {
   data: () => ({
     logs: [],
     nextId: 1,
   }),
   beforeCreate: function() {
-    function wrap(vm, type, original) {
-      return function() {
-        const args = [];
-        for (let i = 0; i < arguments.length; i++) {
-          const arg = arguments[i];
-          if (arg === Object(arg)) {
-            args.push(JSON.stringify(arg, null, 2));
-          } else {
-            args.push(arg);
-          }
-        }
-        vm.logs.push({
-          id: vm.nextId++,
-          line: args.join(' '),
-          type,
-        });
-        original(...arguments);
-      };
-    }
-    console.log = wrap(this, 'log', console.log);
-    console.error = wrap(this, 'error', console.error);
+    console.log = function() {
+      this.addToLog(arguments, 'log');
+      consoleLog(...arguments);
+    }.bind(this);
+    console.error = function() {
+      this.addToLog(arguments, 'error');
+      consoleError(...arguments);
+    }.bind(this);
   },
   updated() {
     const elem = this.$refs.log;
     elem.scrollTop = elem.scrollHeight;
+  },
+  methods: {
+    addToLog(origArgs, type) {
+      const args = [];
+      for (let i = 0; i < origArgs.length; i++) {
+        const arg = origArgs[i];
+        if (arg.constructor === Object) {
+          args.push(JSON.stringify(arg, null, 2));
+        } else {
+          args.push(arg);
+        }
+      }
+      this.$nextTick(() => {
+        this.logs.push({
+          id: this.nextId++,
+          line: args.join(' '),
+          type,
+        });
+      });
+    },
   },
 };
 </script>
