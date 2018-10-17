@@ -16,6 +16,7 @@
 
 <script>
 import Vue from 'vue';
+import Vuex from 'vuex';
 import ConsoleLogger from './ConsoleLogger.vue';
 import routes from './routes';
 
@@ -29,6 +30,7 @@ export default {
   data: () => ({
     scope: {
       Vue,
+      Vuex,
     },
   }),
   components: {
