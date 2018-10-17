@@ -7,11 +7,11 @@
 
 <script>
 const myMixin = {
-  created: function() {
+  created() {
     console.log('created from mixin');
   },
   computed: {
-    bye: function() {
+    bye() {
       console.log('bye from mixin');
     },
   },
@@ -19,11 +19,11 @@ const myMixin = {
 
 const MixedComponent = {
   mixins: [myMixin],
-  created: function() {
+  created() {
     console.log('created from component');
   },
   computed: {
-    bye: function() {
+    bye() {
       console.log('bye from component');
     },
   },

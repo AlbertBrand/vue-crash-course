@@ -37,7 +37,7 @@ const Parent = {
     ChildCallback,
   },
   methods: {
-    parentMethod: function(childName) {
+    parentMethod(childName) {
       console.log('parent called by', childName);
     },
   },

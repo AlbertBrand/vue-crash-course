@@ -28,10 +28,10 @@
 <script>
 export default {
   methods: {
-    tagName: function(event) {
+    tagName(event) {
       console.log(event.target.tagName);
     },
-    say: function(text) {
+    say(text) {
       console.log(text);
     },
   },

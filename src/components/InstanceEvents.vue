@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  created: function() {
+  created() {
     this.$on('test', function(msg) {
       console.log(msg);
     });

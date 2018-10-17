@@ -21,7 +21,7 @@
 
     <h2>Directive modifiers</h2>
     <label>Checkbox:
-      <input type="checkbox" @click.prevent="onCheck"/>
+      <input type="checkbox" @click.prevent="onCheck" />
     </label>
   </div>
 </template>
@@ -33,10 +33,10 @@ export default {
     url: 'https://xebia.com',
   }),
   methods: {
-    onClick: function() {
+    onClick() {
       console.log('happy');
     },
-    onCheck: function() {
+    onCheck() {
       console.log('clicked but not checked');
     },
   },

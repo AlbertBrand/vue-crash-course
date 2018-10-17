@@ -11,7 +11,7 @@
     </div>
 
     <h2>Reactivity</h2>
-    <input type="text" v-model="newTodo"/>
+    <input type="text" v-model="newTodo" />
     <button @click="addTodo">Add todo</button>
   </div>
 </template>
@@ -29,7 +29,7 @@ export default {
     newTodo: '',
   }),
   methods: {
-    addTodo: function() {
+    addTodo() {
       this.todos.push(this.newTodo);
       this.newTodo = '';
     },

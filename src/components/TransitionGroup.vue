@@ -42,19 +42,19 @@ export default {
     nextNum: 10,
   }),
   methods: {
-    add: function() {
+    add() {
       this.items.splice(this.randomIndex(), 0, this.nextNum++);
       this.$forceUpdate(); // only needed in sandbox
     },
-    remove: function() {
+    remove() {
       this.items.splice(this.randomIndex(), 1);
       this.$forceUpdate(); // only needed in sandbox
     },
-    shuffle: function() {
+    shuffle() {
       this.items = shuffle(this.items);
       this.$forceUpdate(); // only needed in sandbox
     },
-    randomIndex: function() {
+    randomIndex() {
       return Math.floor(Math.random() * this.items.length);
     },
   },

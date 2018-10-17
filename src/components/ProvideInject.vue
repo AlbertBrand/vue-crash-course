@@ -17,7 +17,7 @@ var ThemeProvider = {
   props: {
     primaryColor: { type: String, required: true },
   },
-  provide: function() {
+  provide() {
     return {
       primaryColor: this.primaryColor,
     };
@@ -30,7 +30,7 @@ var ThemeProvider = {
 var ThemeP = {
   inject: ['primaryColor'],
   computed: {
-    style: function() {
+    style() {
       return { color: this.primaryColor };
     },
   },
@@ -48,7 +48,7 @@ export default {
     ThemeP,
   },
   methods: {
-    flip: function() {
+    flip() {
       this.primaryColor = this.primaryColor === 'blue' ? 'red' : 'blue';
     },
   },

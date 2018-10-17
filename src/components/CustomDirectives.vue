@@ -14,13 +14,13 @@
 
 <script>
 const Focus = {
-  inserted: function(el) {
+  inserted(el) {
     el.focus();
   },
 };
 
 const Demo = {
-  bind: function(el, binding) {
+  bind(el, binding) {
     var s = JSON.stringify;
     el.innerHTML = `
       <p>name: ${s(binding.name)} 

@@ -41,13 +41,13 @@ const Counter = {
   props: {
     initial: { type: Number },
   },
-  data: function() {
+  data() {
     return {
       count: this.initial,
     };
   },
   methods: {
-    increase: function() {
+    increase() {
       this.count++;
     },
   },

@@ -20,7 +20,7 @@ export default {
     isButtonDisabled: true,
   }),
   methods: {
-    updateMsg: function() {
+    updateMsg() {
       this.msg = 'Bye bye';
     },
   },

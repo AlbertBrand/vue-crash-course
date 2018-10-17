@@ -2,7 +2,7 @@
   <div>
     <p>{{ message }}</p>
     <button @click="reverseMessage">Reverse Message</button>
-    <p><label>Edit message: <input v-model="message"/></label></p>
+    <p><label>Edit message: <input v-model="message" /></label></p>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
     message: 'Hello Vue.js!',
   }),
   methods: {
-    reverseMessage: function() {
+    reverseMessage() {
       this.message = this.message
         .split('')
         .reverse()

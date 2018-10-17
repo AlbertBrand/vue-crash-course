@@ -61,7 +61,7 @@ export default {
     errorClass: 'text-danger',
   }),
   computed: {
-    computedClassObject: function() {
+    computedClassObject() {
       return {
         active: this.isActive,
         'text-danger': this.error && this.error.type === 'fatal',

@@ -14,7 +14,7 @@
 
 <script>
 const MyHeader = {
-  render: function(createElement) {
+  render(createElement) {
     return createElement(
       'h' + this.level,
       { class: 'custom' },
@@ -28,7 +28,7 @@ const MyHeader = {
 
 const MyTable = {
   functional: true,
-  render: function(createElement, context) {
+  render(createElement, context) {
     return createElement('table', context.data, context.children);
   },
 };
@@ -38,7 +38,7 @@ const MyRow = {
   props: {
     values: { type: Array, required: true },
   },
-  render: function(createElement, context) {
+  render(createElement, context) {
     return createElement(
       'tr',
       context.data,

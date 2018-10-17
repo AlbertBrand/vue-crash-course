@@ -40,7 +40,7 @@ const TodoList = {
     newTodoId: 4,
   },
   methods: {
-    addNewTodo: function() {
+    addNewTodo() {
       if (!this.newTodoText.length) return;
       this.todos.push({
         id: this.newTodoId++,
@@ -48,7 +48,7 @@ const TodoList = {
       });
       this.newTodoText = '';
     },
-    removeTodo: function(item) {
+    removeTodo(item) {
       this.todos = this.todos.filter(listItem => listItem !== item);
     },
   },

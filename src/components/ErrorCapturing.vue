@@ -17,7 +17,7 @@ const ErrorBoundary = {
   data: () => ({
     errorMessage: undefined,
   }),
-  errorCaptured: function(error, cmp, info) {
+  errorCaptured(error, cmp, info) {
     console.log('error captured in', info);
     this.errorMessage = error.toString();
     return false;
@@ -34,7 +34,7 @@ const ErrorThrower = {
     obj: {},
   }),
   methods: {
-    boom: function() {
+    boom() {
       this.obj = undefined;
     },
   },

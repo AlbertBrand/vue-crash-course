@@ -11,12 +11,12 @@ export default {
     name: 'Harry',
   }),
   methods: {
-    changeName: function() {
+    changeName() {
       this.name = this.name === 'Sally' ? 'Harry' : 'Sally';
     },
   },
   watch: {
-    name: function(newValue, oldValue) {
+    name(newValue, oldValue) {
       console.log({ name: this.name, new: newValue, old: oldValue });
     },
   },

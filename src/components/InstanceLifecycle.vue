@@ -13,28 +13,28 @@ const Lifecycle = {
       type: Number,
     },
   },
-  beforeCreate: function() {
+  beforeCreate() {
     console.log('beforeCreate');
   },
-  created: function() {
+  created() {
     console.log('created');
   },
-  beforeMount: function() {
+  beforeMount() {
     console.log('beforeMount');
   },
-  mounted: function() {
+  mounted() {
     console.log('mounted');
   },
-  beforeUpdate: function() {
+  beforeUpdate() {
     console.log('beforeUpdate');
   },
-  updated: function() {
+  updated() {
     console.log('updated');
   },
-  beforeDestroy: function() {
+  beforeDestroy() {
     console.log('beforeDestroy');
   },
-  destroyed: function() {
+  destroyed() {
     console.log('destroyed');
   },
   methods: {},
@@ -50,10 +50,10 @@ const Wrapper = {
     time: undefined,
   }),
   methods: {
-    updateTime: function() {
+    updateTime() {
       this.time = Date.now();
     },
-    toggle: function() {
+    toggle() {
       this.shown = !this.shown;
     },
   },

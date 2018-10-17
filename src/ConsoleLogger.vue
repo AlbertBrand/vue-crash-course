@@ -13,7 +13,7 @@ export default {
     logs: [],
     nextId: 1,
   }),
-  beforeCreate: function() {
+  beforeCreate() {
     console.log = function() {
       this.addToLog(arguments, 'log');
       consoleLog(...arguments);

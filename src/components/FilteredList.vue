@@ -20,12 +20,12 @@ export default {
     numbers: [1, 2, 3, 4, 5],
   }),
   methods: {
-    evenFilter: function(numbers) {
+    evenFilter(numbers) {
       return numbers.filter(number => number % 2 === 0);
     },
   },
   computed: {
-    evenNumbers: function() {
+    evenNumbers() {
       return this.evenFilter(this.numbers);
     },
   },

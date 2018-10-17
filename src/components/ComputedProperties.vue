@@ -6,7 +6,7 @@
     <p>Computed reversed message: {{ reversedMessage }}</p>
 
     <h2>Computed setter</h2>
-    <p>Message length: <input type="number" v-model="messageLength"/></p>
+    <p>Message length: <input type="number" v-model="messageLength" /></p>
   </div>
 </template>
 
@@ -16,17 +16,17 @@ export default {
     message: 'This is a message',
   }),
   computed: {
-    reversedMessage: function() {
+    reversedMessage() {
       return this.message
         .split('')
         .reverse()
         .join('');
     },
     messageLength: {
-      get: function() {
+      get() {
         return this.message.length;
       },
-      set: function(length) {
+      set(length) {
         this.message = this.message.substring(0, length);
       },
     },
