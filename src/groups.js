@@ -22,6 +22,7 @@ import ComponentMessaging from '!raw-loader!./components/ComponentMessaging.vue'
 import PropsPassing from '!raw-loader!./components/PropsPassing.vue';
 import PropsValidation from '!raw-loader!./components/PropsValidation.vue';
 import Slots from '!raw-loader!./components/Slots.vue';
+import KeepAlive from '!raw-loader!./components/KeepAlive.vue';
 import AsyncComponent from '!raw-loader!./components/AsyncComponent.vue';
 import Mixins from '!raw-loader!./components/Mixins.vue';
 import CustomDirectives from '!raw-loader!./components/CustomDirectives.vue';
@@ -78,6 +79,7 @@ const groups = [
       { name: 'Props Passing', code: PropsPassing },
       { name: 'Props Validation', code: PropsValidation },
       { name: 'Slots', code: Slots },
+      { name: 'Keep Alive', code: KeepAlive },
       { name: 'Asynchronous Component', code: AsyncComponent },
     ],
   },
