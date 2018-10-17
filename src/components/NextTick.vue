@@ -8,12 +8,11 @@ export default {
     text: 'Update element',
   }),
   methods: {
-    update() {
+    async update() {
       this.text = 'Element updated!';
       console.log(this.$el.textContent);
-      this.$nextTick(() => {
-        console.log(this.$el.textContent);
-      });
+      await this.$nextTick();
+      console.log(this.$el.textContent);
     },
   },
 };
