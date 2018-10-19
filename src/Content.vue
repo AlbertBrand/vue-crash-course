@@ -1,7 +1,7 @@
 <template>
   <div class="content">
-    <route-header :component="component"></route-header>
-    <vuep :template="component.code" :key="'preview:' + component.name" :scope="scope" class="preview" />
+    <route-header :component="component" @resetCode="resetCode"></route-header>
+    <vuep v-model="code" :key="'preview:' + component.name" :scope="scope" ref="preview" class="preview" />
     <console-logger :key="'log:' + component.name" class="logger" />
   </div>
 </template>
@@ -28,6 +28,25 @@ export default {
   components: {
     RouteHeader,
     ConsoleLogger,
+  },
+  computed: {
+    code: {
+      get() {
+        const localCode = localStorage.getItem(this.component.name);
+        const providedCode = this.component.code;
+        return localCode !== null ? localCode : providedCode;
+      },
+      set(code) {
+        localStorage.setItem(this.component.name, code);
+      },
+    },
+  },
+  methods: {
+    resetCode() {
+      localStorage.removeItem(this.component.name);
+      // small hack to trigger component re-rendering
+      this.component.code += ' ';
+    },
   },
 };
 </script>

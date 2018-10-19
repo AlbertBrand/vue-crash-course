@@ -2,9 +2,10 @@
   <header class="header">
     <h1>{{component.name}}</h1>
     <nav class="quick">
-      <router-link v-if="prevPath" :to="prevPath">⇦</router-link>
+      <a href="#" id="reset" @click.prevent="$emit('resetCode')" title="Reset editor">⎌</a>
+      <router-link v-if="prevPath" :to="prevPath" title="Previous example">⇦</router-link>
       <span v-else>⇦</span>
-      <router-link v-if="nextPath" :to="nextPath">⇨</router-link>
+      <router-link v-if="nextPath" :to="nextPath" title="Next example">⇨</router-link>
       <span v-else>⇨</span>
     </nav>
   </header>
@@ -42,6 +43,12 @@ export default {
 }
 h1 {
   margin: 0 0 10px;
+}
+.quick {
+  display: flex;
+  flex: 1;
+}
+.quick #reset {
   flex: 1;
 }
 .quick * {
