@@ -37,7 +37,9 @@ export default {
         return localCode !== null ? localCode : providedCode;
       },
       set(code) {
-        localStorage.setItem(this.component.name, code);
+        if (this.component.code.trim() !== code.trim()) {
+          localStorage.setItem(this.component.name, code);
+        }
       },
     },
   },
