@@ -32,6 +32,7 @@ import ErrorCapturing from '!raw-loader!./components/ErrorCapturing.vue';
 import RenderFunction from '!raw-loader!./components/RenderFunction.vue';
 import ProvideInject from '!raw-loader!./components/ProvideInject.vue';
 import InstanceEvents from '!raw-loader!./components/InstanceEvents.vue';
+import ReactivityCaveats from '!raw-loader!./components/ReactivityCaveats.vue';
 import NextTick from '!raw-loader!./components/NextTick.vue';
 import BasicHttp from '!raw-loader!./components/BasicHttp.vue';
 import Interceptor from '!raw-loader!./components/Interceptor.vue';
@@ -102,6 +103,7 @@ const groups = [
       { name: 'Render Function', code: RenderFunction },
       { name: 'Provide and Inject', code: ProvideInject },
       { name: 'Instance Events', code: InstanceEvents },
+      { name: 'Reactivity Caveats', code: ReactivityCaveats },
       { name: 'Next Tick', code: NextTick },
     ],
   },
