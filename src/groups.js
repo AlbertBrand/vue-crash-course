@@ -35,6 +35,7 @@ import NextTick from '!raw-loader!./components/NextTick.vue';
 import BasicHttp from '!raw-loader!./components/BasicHttp.vue';
 import Interceptor from '!raw-loader!./components/Interceptor.vue';
 import Resource from '!raw-loader!./components/Resource.vue';
+import StatefulComponent from '!raw-loader!./components/StatefulComponent.vue';
 import VuexStore from '!raw-loader!./components/VuexStore.vue';
 
 const groups = [
@@ -112,7 +113,10 @@ const groups = [
   },
   {
     name: 'State management',
-    components: [{ name: 'Vuex Store', code: VuexStore }],
+    components: [
+      { name: 'Stateful Component', code: StatefulComponent },
+      { name: 'Vuex Store', code: VuexStore },
+    ],
   },
 ];
 
