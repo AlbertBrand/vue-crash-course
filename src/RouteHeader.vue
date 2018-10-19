@@ -1,8 +1,8 @@
 <template>
   <header class="header">
     <h1>{{component.name}}</h1>
+    <a href="#" class="reset" @click.prevent="$emit('resetCode')" title="Reset editor">⎌</a>
     <nav class="quick">
-      <a href="#" id="reset" @click.prevent="$emit('resetCode')" title="Reset editor">⎌</a>
       <router-link v-if="prevPath" :to="prevPath" title="Previous example">⇦</router-link>
       <span v-else>⇦</span>
       <router-link v-if="nextPath" :to="nextPath" title="Next example">⇨</router-link>
@@ -45,12 +45,11 @@ h1 {
   margin: 0 0 10px;
 }
 .quick {
+  flex: 1;
   display: flex;
-  flex: 1;
+  justify-content: flex-end;
 }
-.quick #reset {
-  flex: 1;
-}
+.reset,
 .quick * {
   margin-left: 10px;
   font-size: 30px;
@@ -58,6 +57,7 @@ h1 {
 .quick span {
   color: #ccc;
 }
+a.reset,
 .quick a {
   text-decoration: none;
 }
