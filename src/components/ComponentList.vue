@@ -14,12 +14,10 @@
 
 <script>
 const TodoItem = {
-  template: `
-    <li>
-      {{ todo.title }}
-      <button @click="onRemove(todo)">Remove</button>
-    </li>
-  `,
+  template: `<li>
+    {{ todo.title }}
+    <button @click="onRemove(todo)">Remove</button>
+  </li>`,
   props: {
     todo: { type: Object },
     onRemove: { type: Function },

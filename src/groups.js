@@ -2,6 +2,7 @@ import HelloWorld from '!raw-loader!./components/HelloWorld.vue';
 import AttributeBinding from '!raw-loader!./components/AttributeBinding.vue';
 import SimpleList from '!raw-loader!./components/SimpleList.vue';
 import UserInput from '!raw-loader!./components/UserInput.vue';
+import CustomComponent from '!raw-loader!./components/CustomComponent.vue';
 import ComponentProps from '!raw-loader!./components/ComponentProps.vue';
 import InstanceLifecycle from '!raw-loader!./components/InstanceLifecycle.vue';
 import Interpolation from '!raw-loader!./components/Interpolation.vue';
@@ -46,6 +47,7 @@ const groups = [
       { name: 'Attribute Binding', code: AttributeBinding },
       { name: 'Simple List', code: SimpleList },
       { name: 'User Input and Reactive Binding', code: UserInput },
+      { name: 'Custom Component', code: CustomComponent },
       { name: 'Component and Props', code: ComponentProps },
     ],
   },

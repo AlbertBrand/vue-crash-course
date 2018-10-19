@@ -66,6 +66,6 @@ export default {
   padding-bottom: 10px;
 }
 .logger {
-  height: 200px;
+  height: 120px;
 }
 </style>

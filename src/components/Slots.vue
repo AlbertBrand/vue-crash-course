@@ -17,7 +17,6 @@
 
       <p slot="footer">
         Here's some contact info
-        <reset-button></reset-button>
       </p>
     </layout>
   </div>
@@ -25,12 +24,10 @@
 
 <script>
 const AlertBox = {
-  template: `
-    <div class="alert-box">
-      <strong>Error!</strong>
-      <slot></slot>
-    </div>
-  `,
+  template: `<div class="alert-box">
+    <strong>Error!</strong>
+    <slot></slot>
+  </div>`,
 };
 
 const ResetButton = {
@@ -38,22 +35,20 @@ const ResetButton = {
 };
 
 const Layout = {
-  template: `
-    <div>
-      <header>
-        <slot name="header"></slot>
-      </header>
-      <main>
-        <slot></slot>
-        <slot name="extra">
-          <strong>Default extra text</strong>
-        </slot>
-      </main>
-      <footer>
-        <slot name="footer"></slot>
-      </footer>
-    </div>
-  `,
+  template: `<div>
+    <header>
+      <slot name="header"></slot>
+    </header>
+    <main>
+      <slot></slot>
+      <slot name="extra">
+        <strong>Default extra text</strong>
+      </slot>
+    </main>
+    <footer>
+      <slot name="footer"></slot>
+    </footer>
+  </div>`,
 };
 
 const Parent = {

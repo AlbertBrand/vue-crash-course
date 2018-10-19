@@ -12,6 +12,12 @@
   </div>
 </template>
 
+<style scoped>
+.custom {
+  color: green;
+}
+</style>
+
 <script>
 const MyHeader = {
   render(createElement) {
@@ -55,9 +61,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.custom {
-  color: green;
-}
-</style>

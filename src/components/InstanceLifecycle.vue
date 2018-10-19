@@ -1,7 +1,7 @@
 <template>
   <div>
     <button @click="updateTime">Update props</button>
-    <button @click="toggle">Toggle component</button>
+    <button @click="shown = !shown">Toggle component</button>
     <lifecycle v-if="shown" :time="time"></lifecycle>
   </div>
 </template>
@@ -41,7 +41,7 @@ const Lifecycle = {
   template: `<p>Time: {{ time }}</p>`,
 };
 
-const Wrapper = {
+const Root = {
   components: {
     Lifecycle,
   },
@@ -53,11 +53,8 @@ const Wrapper = {
     updateTime() {
       this.time = Date.now();
     },
-    toggle() {
-      this.shown = !this.shown;
-    },
   },
 };
 
-export default Wrapper;
+export default Root;
 </script>

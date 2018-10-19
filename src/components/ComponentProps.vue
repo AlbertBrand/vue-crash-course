@@ -1,29 +1,38 @@
 <template>
-  <ol>
-    <todo-item v-for="item in groceryList" :todo="item" :key="item.id"></todo-item>
-  </ol>
+  <triple-sayer name="parrot" line="Polly wants a cracker"></triple-sayer>
 </template>
 
 <script>
-const TodoItem = {
+const SingleLine = {
   props: {
-    todo: { type: Object },
+    text: { type: String },
   },
-  template: '<li>{{ todo.text }}</li>',
+  template: '<li>{{ text }}</li>',
 };
 
-const TodoList = {
+const TripleSayer = {
+  props: {
+    name: { type: String },
+    line: { type: String },
+  },
   components: {
-    TodoItem,
+    SingleLine,
   },
-  data: () => ({
-    groceryList: [
-      { id: 0, text: 'Vegetables' },
-      { id: 1, text: 'Cheese' },
-      { id: 2, text: 'Whatever else humans are supposed to eat' },
-    ],
-  }),
+  template: `<div>
+    <h2>A {{ name }} says:</h2>
+    <ul>
+      <single-line :text="line"></single-line>
+      <single-line :text="line"></single-line>
+      <single-line :text="line"></single-line>
+    </ul>
+  </div>`,
 };
 
-export default TodoList;
+const Root = {
+  components: {
+    TripleSayer,
+  },
+};
+
+export default Root;
 </script>

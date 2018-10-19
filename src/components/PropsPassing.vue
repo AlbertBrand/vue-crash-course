@@ -20,11 +20,10 @@ const BlogPost = {
   props: {
     postTitle: { type: String },
   },
-  template: `
-    <div>
-      <strong>{{ postTitle }}</strong>
-      <p>Lorem ipsum</p>
-    </div>`,
+  template: `<div>
+    <strong>{{ postTitle }}</strong>
+    <p>Lorem ipsum</p>
+  </div>`,
 };
 
 const Question = {
@@ -51,7 +50,10 @@ const Counter = {
       this.count++;
     },
   },
-  template: `<div>{{ count }} <button @click="increase()">Increase</button></div>`,
+  template: `<div>
+    {{ count }} 
+    <button @click="increase()">Increase</button>
+  </div>`,
 };
 
 const Root = {

@@ -10,12 +10,10 @@ const ChildEmit = {
   props: {
     name: { type: String },
   },
-  template: `
-    <div>
-      <h2>Child {{ name }}</h2>
-      <button @click="$emit('parent', name)">Emit</button>
-    </div>
-  `,
+  template: `<div>
+    <h2>Child {{ name }}</h2>
+    <button @click="$emit('parent', name)">Emit</button>
+  </div>`,
 };
 
 const ChildCallback = {
@@ -23,12 +21,10 @@ const ChildCallback = {
     name: { type: String },
     onClick: { type: Function },
   },
-  template: `
-    <div>
-      <h2>Child {{ name }}</h2>
-      <button @click="onClick(name)">Callback</button>
-    </div>
-  `,
+  template: `<div>
+    <h2>Child {{ name }}</h2>
+    <button @click="onClick(name)">Callback</button>
+  </div>`,
 };
 
 const Parent = {
