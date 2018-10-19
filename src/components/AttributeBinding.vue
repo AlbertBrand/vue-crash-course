@@ -1,7 +1,6 @@
 <template>
   <span :title="message">
-    Hover your mouse over me for a few seconds
-    to see my dynamically bound title!
+    Hover cursor over this text to see my dynamically bound title
   </span>
 </template>
 

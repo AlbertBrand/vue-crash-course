@@ -41,11 +41,11 @@ const groups = [
   {
     name: 'Start',
     components: [
-      { name: 'Hello World', code: HelloWorld },
+      { name: 'Hello Vue', code: HelloWorld },
       { name: 'Attribute Binding', code: AttributeBinding },
       { name: 'Simple List', code: SimpleList },
-      { name: 'User input and reactive binding', code: UserInput },
-      { name: 'Component Props', code: ComponentProps },
+      { name: 'User Input and Reactive Binding', code: UserInput },
+      { name: 'Component and Props', code: ComponentProps },
     ],
   },
   {
@@ -111,8 +111,8 @@ const groups = [
     ],
   },
   {
-    name: 'Vuex state management',
-    components: [{ name: 'Vuex store', code: VuexStore }],
+    name: 'State management',
+    components: [{ name: 'Vuex Store', code: VuexStore }],
   },
 ];
 

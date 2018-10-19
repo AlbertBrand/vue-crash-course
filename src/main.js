@@ -18,8 +18,13 @@ const router = new VueRouter({
   routes,
 });
 
-new Vue({
+const app = new Vue({
   el: '#app',
   router,
   render: h => h(App),
 });
+
+// dev helper
+window.cmp = () => {
+  return app.$children[0].$children[1].$children[2].$children[1].$children[0];
+};
