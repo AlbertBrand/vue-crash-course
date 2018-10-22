@@ -40,6 +40,11 @@ import Resource from '!raw-loader!./components/Resource.vue';
 import StatefulComponent from '!raw-loader!./components/StatefulComponent.vue';
 import VuexStore from '!raw-loader!./components/VuexStore.vue';
 
+import Exercise1 from '!raw-loader!./components/Exercise1.vue';
+import Exercise2 from '!raw-loader!./components/Exercise2.vue';
+import Exercise3 from '!raw-loader!./components/Exercise3.vue';
+import Exercise4 from '!raw-loader!./components/Exercise4.vue';
+
 const groups = [
   {
     name: 'Start',
@@ -50,6 +55,7 @@ const groups = [
       { name: 'User Input and Reactive Binding', code: UserInput },
       { name: 'Custom Component', code: CustomComponent },
       { name: 'Component and Props', code: ComponentProps },
+      { name: 'Exercise 1', code: Exercise1 },
     ],
   },
   {
@@ -60,21 +66,17 @@ const groups = [
       { name: 'Built-in Directives', code: BuiltInDirectives },
       { name: 'Computed Properties', code: ComputedProperties },
       { name: 'Watcher', code: Watcher },
+      { name: 'Exercise 2', code: Exercise2 },
       { name: 'Class Bindings', code: ClassBindings },
       { name: 'Style Bindings', code: StyleBindings },
       { name: 'Conditionals', code: Conditionals },
       { name: 'Extended List', code: ExtendedList },
+      { name: 'Exercise 3', code: Exercise3 },
       { name: 'Filtered List', code: FilteredList },
       { name: 'Component List', code: ComponentList },
       { name: 'Event Handling', code: EventHandling },
       { name: 'v-model Binding', code: VModelBinding },
-    ],
-  },
-  {
-    name: 'Animation',
-    components: [
-      { name: 'Transition', code: Transition },
-      { name: 'Transition Group', code: TransitionGroup },
+      { name: 'Exercise 4', code: Exercise4 },
     ],
   },
   {
@@ -86,6 +88,13 @@ const groups = [
       { name: 'Slots', code: Slots },
       { name: 'Keep Alive', code: KeepAlive },
       { name: 'Asynchronous Component', code: AsyncComponent },
+    ],
+  },
+  {
+    name: 'Animation',
+    components: [
+      { name: 'Transition', code: Transition },
+      { name: 'Transition Group', code: TransitionGroup },
     ],
   },
   {

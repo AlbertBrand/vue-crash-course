@@ -37,7 +37,6 @@ const Lifecycle = {
   destroyed() {
     console.log('destroyed');
   },
-  methods: {},
   template: `<p>Time: {{ time }}</p>`,
 };
 
