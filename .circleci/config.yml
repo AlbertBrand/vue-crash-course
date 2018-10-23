@@ -11,9 +11,11 @@ jobs:
           - v1-dependencies-{{ checksum "package.json" }}
           - v1-dependencies-
       - run: yarn install
+      - run: yarn global add now
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: yarn lint
       - run: yarn dev-build
+      - run: cd dist && $HOME/.config/yarn/global/node_modules/.bin/now -t ${NOW_TOKEN} && $HOME/.config/yarn/global/node_modules/.bin/now alias -t ${NOW_TOKEN}
