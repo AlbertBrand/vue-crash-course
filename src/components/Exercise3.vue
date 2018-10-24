@@ -6,7 +6,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .odd {
   background-color: lightblue;
 }

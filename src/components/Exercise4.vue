@@ -6,7 +6,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .red {
   background-color: red;
 }

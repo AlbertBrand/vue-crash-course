@@ -26,5 +26,5 @@ const app = new Vue({
 
 // dev helper
 window.cmp = () => {
-  return app.$children[0].$children[1].$children[2].$children[1].$children[0];
+  return app.$children[0].$children[1].$children[1].$children[1].$children[0];
 };

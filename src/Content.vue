@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <route-header :component="component" @resetCode="resetCode"></route-header>
-    <vuep v-model="code" :key="'preview:' + component.name" :scope="scope" ref="preview" class="preview" />
+    <vuep v-model="code" :key="'preview:' + component.name" :scope="scope" class="preview" />
     <console-logger :key="'log:' + component.name" class="logger" />
   </div>
 </template>

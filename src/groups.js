@@ -24,6 +24,7 @@ import ComponentMessaging from '!raw-loader!./components/ComponentMessaging.vue'
 import PropsPassing from '!raw-loader!./components/PropsPassing.vue';
 import PropsValidation from '!raw-loader!./components/PropsValidation.vue';
 import Slots from '!raw-loader!./components/Slots.vue';
+import DynamicComponent from '!raw-loader!./components/DynamicComponent.vue';
 import KeepAlive from '!raw-loader!./components/KeepAlive.vue';
 import AsyncComponent from '!raw-loader!./components/AsyncComponent.vue';
 import Mixins from '!raw-loader!./components/Mixins.vue';
@@ -88,8 +89,6 @@ const groups = [
       { name: 'Props Passing', code: PropsPassing },
       { name: 'Props Validation', code: PropsValidation },
       { name: 'Slots', code: Slots },
-      { name: 'Keep Alive', code: KeepAlive },
-      { name: 'Asynchronous Component', code: AsyncComponent },
     ],
   },
   {
@@ -110,6 +109,9 @@ const groups = [
   {
     name: 'Advanced',
     components: [
+      { name: 'Dynamic Component', code: DynamicComponent },
+      { name: 'Keep Alive', code: KeepAlive },
+      { name: 'Asynchronous Component', code: AsyncComponent },
       { name: 'Error Capturing', code: ErrorCapturing },
       { name: 'Render Function', code: RenderFunction },
       { name: 'Provide and Inject', code: ProvideInject },

@@ -26,7 +26,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .centered {
   text-align: center;
 }
