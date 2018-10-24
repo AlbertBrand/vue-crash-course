@@ -1,3 +1,4 @@
+import Intro from '!raw-loader!./components/Intro.vue';
 import HelloWorld from '!raw-loader!./components/HelloWorld.vue';
 import AttributeBinding from '!raw-loader!./components/AttributeBinding.vue';
 import SimpleList from '!raw-loader!./components/SimpleList.vue';
@@ -49,6 +50,7 @@ const groups = [
   {
     name: 'Start',
     components: [
+      { name: 'Introduction', code: Intro },
       { name: 'Hello Vue', code: HelloWorld },
       { name: 'Attribute Binding', code: AttributeBinding },
       { name: 'Simple List', code: SimpleList },
