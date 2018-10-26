@@ -32,7 +32,7 @@ export default {
       const args = [];
       for (let i = 0; i < origArgs.length; i++) {
         const arg = origArgs[i];
-        if (arg.constructor === Object) {
+        if (arg !== undefined && arg !== null && arg.constructor === Object) {
           args.push(JSON.stringify(arg, null, 2));
         } else {
           args.push(arg);

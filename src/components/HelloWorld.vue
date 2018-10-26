@@ -1,11 +1,13 @@
 <template>
+  <!-- Component templates must have exactly one root element. -->
   <div class="hello">
     <img alt="Vue logo" src="assets/logo.png">
+    <!-- 'Mustache' syntax interpolates text -->
     <div id="hello-world">Hello, {{ name }}!</div>
   </div>
 </template>
 
-<style>
+<style scoped>
 .hello {
   text-align: center;
 }
@@ -16,7 +18,9 @@
 </style>
 
 <script>
+// An object literal defines a component in a concise way.
 export default {
+  // The 'data' method returns the initial data of the component.
   data: () => ({
     name: 'Vue',
   }),

@@ -3,6 +3,7 @@ import HelloWorld from '!raw-loader!./components/HelloWorld.vue';
 import AttributeBinding from '!raw-loader!./components/AttributeBinding.vue';
 import SimpleList from '!raw-loader!./components/SimpleList.vue';
 import UserInput from '!raw-loader!./components/UserInput.vue';
+import DOMEventHandling from '!raw-loader!./components/DOMEventHandling.vue';
 import CustomComponent from '!raw-loader!./components/CustomComponent.vue';
 import ComponentProps from '!raw-loader!./components/ComponentProps.vue';
 import InstanceLifecycle from '!raw-loader!./components/InstanceLifecycle.vue';
@@ -54,8 +55,9 @@ const groups = [
       { name: 'Introduction', code: Intro },
       { name: 'Hello Vue', code: HelloWorld },
       { name: 'Attribute Binding', code: AttributeBinding },
-      { name: 'Simple List', code: SimpleList },
-      { name: 'User Input and Reactive Binding', code: UserInput },
+      { name: 'List Rendering', code: SimpleList },
+      { name: 'Two-way Binding', code: UserInput },
+      { name: 'DOM Event Handling', code: DOMEventHandling },
       { name: 'Custom Component', code: CustomComponent },
       { name: 'Component and Props', code: ComponentProps },
       { name: 'Exercise 1', code: Exercise1 },
