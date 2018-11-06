@@ -1,14 +1,26 @@
 <template>
   <div>
     <p>Message: {{ msg }}</p>
-    <p>Message reversed: {{ msg.split('').reverse().join('') }}</p>
-    <p v-once>Message rendered once: {{ msg }}</p>
-    <button @click="updateMsg">Update message</button>
 
-    <p>Using mustaches: {{ rawHtml }}</p>
+    <!-- Data bindings support JavaScript syntax -->
+    <p>Message reversed: {{ msg.split('').reverse().join('') }}</p>
+
+    <!-- v-once directive interpolates bindings once -->
+    <p v-once>Message rendered once: {{ msg }}</p>
+
+    <button @click="msg = 'Bye bye'">Update message</button>
+
+    <!-- Output is escaped... -->
+    <p>Using mustache syntax: {{ rawHtml }}</p>
+
+    <!-- ...unless v-html directive is used -->
     <p>Using v-html directive: <span v-html="rawHtml"></span></p>
 
-    <button :disabled="isButtonDisabled">Button</button>
+    <!-- Several HTML attributes are treated special -->
+    <button :disabled="true">Button</button>
+
+    <!-- Falsy variables hide the attribute entirely -->
+    <button :disabled="false">Button</button>
   </div>
 </template>
 
@@ -17,12 +29,6 @@ export default {
   data: () => ({
     msg: 'Hi there!',
     rawHtml: '<span style="color: red">HTML</span>',
-    isButtonDisabled: true,
   }),
-  methods: {
-    updateMsg() {
-      this.msg = 'Bye bye';
-    },
-  },
 };
 </script>

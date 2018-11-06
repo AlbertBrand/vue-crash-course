@@ -17,7 +17,7 @@ import Conditionals from '!raw-loader!./components/Conditionals.vue';
 import ExtendedList from '!raw-loader!./components/ExtendedList.vue';
 import FilteredList from '!raw-loader!./components/FilteredList.vue';
 import ComponentList from '!raw-loader!./components/ComponentList.vue';
-import EventHandling from '!raw-loader!./components/EventHandling.vue';
+import DOMEventModifiers from '!raw-loader!./components/DOMEventModifiers.vue';
 import VModelBinding from '!raw-loader!./components/VModelBinding.vue';
 import Transition from '!raw-loader!./components/Transition.vue';
 import TransitionGroup from '!raw-loader!./components/TransitionGroup.vue';
@@ -79,7 +79,7 @@ const groups = [
       { name: 'Exercise 3', code: Exercise3 },
       { name: 'Filtered List', code: FilteredList },
       { name: 'Component List', code: ComponentList },
-      { name: 'Event Handling', code: EventHandling },
+      { name: 'DOM Event Modifiers', code: DOMEventModifiers },
       { name: 'v-model Binding', code: VModelBinding },
       { name: 'Exercise 4', code: Exercise4 },
     ],
