@@ -1,0 +1,18 @@
+{
+    "name": "vue-crash-course",
+    "alias": "vue-crash-course",
+    "public": true,
+    "type": "static",
+    "static": {
+        "public": "dist",
+        "rewrites": [
+            {
+                "source": "**",
+                "destination": "/index.html"
+            }
+        ]
+    },
+    "files": [
+        "dist"
+    ]
+}

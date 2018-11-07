@@ -18,4 +18,11 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: yarn lint
       - run: yarn dev-build
-      - run: cd dist && $HOME/.config/yarn/global/node_modules/.bin/now -t ${NOW_TOKEN} && $HOME/.config/yarn/global/node_modules/.bin/now alias -t ${NOW_TOKEN}
+      - run: 
+          name: Deploy and alias
+          command: |
+            $HOME/.config/yarn/global/node_modules/.bin/now -t ${NOW_TOKEN}
+            if [ "$CIRCLE_BRANCH" == "master" ];
+            then
+              $HOME/.config/yarn/global/node_modules/.bin/now alias -t ${NOW_TOKEN}
+            fi 
