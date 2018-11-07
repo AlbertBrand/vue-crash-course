@@ -9,8 +9,10 @@
     "dev-build": "vue-cli-service build --mode development"
   },
   "dependencies": {
+    "babel-standalone": "6.26.0",
     "codemirror": "5.40.2",
     "raw-loader": "0.5.1",
+    "regenerator-runtime": "0.12.1",
     "vue": "^2.5.17",
     "vue-resource": "1.5.1",
     "vue-router": "3.0.1",

@@ -6,6 +6,11 @@ import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 import Vuex from 'vuex';
 import routes from './routes';
+import * as Babel from 'babel-standalone';
+import 'regenerator-runtime/runtime';
+
+// expose babel on window for Vuep
+window.Babel = Babel;
 
 Vue.use(Vuep);
 Vue.use(VueRouter);
