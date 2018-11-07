@@ -79,7 +79,6 @@ const groups = [
       { name: 'Exercise 3', code: Exercise3 },
       { name: 'Filtered List', code: FilteredList },
       { name: 'Component List', code: ComponentList },
-      { name: 'DOM Event Modifiers', code: DOMEventModifiers },
       { name: 'v-model Binding', code: VModelBinding },
       { name: 'Exercise 4', code: Exercise4 },
     ],
@@ -111,6 +110,7 @@ const groups = [
   {
     name: 'Advanced',
     components: [
+      { name: 'DOM Event Modifiers', code: DOMEventModifiers },
       { name: 'Dynamic Component', code: DynamicComponent },
       { name: 'Keep Alive', code: KeepAlive },
       { name: 'Asynchronous Component', code: AsyncComponent },
